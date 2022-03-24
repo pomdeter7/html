@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<title>Site</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="CV.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+			<script>
+				$(document).ready(function() {
+				
+					$("#infos").click(function() { /* montre "informations" souligné et "bouton fermer" et cache le reste */
+						$("#INFOS").show();
+						$("#cacher").show();
+						$("#PRESENTE").hide();
+						$("#CONTACT").hide();
+					});
+					
+					$("#presente").click(function() { /* montre "presentation" souligné et "bouton fermer" et cache le reste */
+						$("#PRESENTE").show();
+						$("#cacher").show();
+						$("#INFOS").hide();
+						$("#CONTACT").hide();
+					});
+					
+					$("#contact").click(function() { /* montre "contact" souligné et "bouton fermer" et cache le reste */
+						$("#CONTACT").show();
+						$("#cacher").show();
+						$("#INFOS").hide();
+						$("#PRESENTE").hide();
+					});
+					
+					$("#cacher").click(function() { /* cache tout */
+						$("#INFOS").hide();
+						$("#PRESENTE").hide();
+						$("#CONTACT").hide();
+						$("#cacher").hide();
+					});
+				});
+			</script>
+	</head>
+	
+	<body>
+		<div id="gauche">
+			<ul>
+				<li id="infos">Informations</li>
+				<li id="presente">Presentation</li>
+				<li id="contact">Contact</li>
+			</ul>
+		</div>
+		
+		<div id="droite">
+			
+			<div id="INFOS" hidden>
+				<h5>Prenom</h5><p>MON PRENOM</p>
+			</div>
+			
+			<div id="PRESENTE" hidden>
+			</div>
+			
+			<div id="CONTACT">
+				<div id="adresse" hidden>
+					<h2>Adresse</h2>
+					<p>50 rue de rien<br>Paris<br>75001</p>
+				</div>
+				
+				<div id="numero">
+					<h2>Telephone</h2>
+					<p>06 45 12 45 12 45</p>
+				</div>
+				
+				<div id="mail">
+					<h2>E-mail</h2>
+					<p>test@gmail.com</p>
+				</div>
+			</div>
+			
+			<div id="cacher">Fermer</div> <!-- bouton pour cacher les elements de #droite -->
+		</div>
+		
+	</body>
+</html>
+
+<!-- mardi 16 fevrier 2016 Donovan Bigot -->

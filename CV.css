@@ -1,0 +1,120 @@
+@font-face { 
+	src: url(absolut.otf); 
+	font-family: abs; 
+}
+
+@font-face { 
+	src: url(typothin.otf);
+	font-family: typ;
+}
+
+@font-face {
+	src: url(typobold.otf);
+	font-family: typBold;
+}
+
+body {
+	background-image: url("bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#gauche{
+	background-color: blue;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 200px;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	animation: gauche 3s;
+}
+
+@keyframes gauche {
+	from {
+		left: -200px;
+		opacity: 0;
+	}
+	
+	to {
+		left: 0px;
+	}
+}
+
+#droite {
+	position: fixed;
+	top: 0px;
+	left: 200px;
+	height: 100%;
+	width: 100%;
+}
+
+#gauche li {
+	position: abolute;
+	width: 0px;
+	list-style-type: none;
+	font-family: abs;
+	font-size: 1.5em;
+	color: lightgrey;
+	margin-bottom: 20px;
+	transition: color 0.3s;
+}
+
+#gauche li:hover {
+	color: grey;
+	cursor: pointer;
+}
+
+#cacher {
+	position: absolute;
+	font-family: abs;
+	background-color: rgba(0,0,0,0.5);
+	color: lightgrey;
+	padding: 5px;
+	left: 0px;
+	cursor: pointer;
+	display: none;
+	transition: color 0.3s;
+}
+
+#cacher:hover {
+	cursor: pointer;
+	color: grey;
+}
+
+
+
+#CONTACT, #PRESENTE, #INFOS, iframe{
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	width: 50%;
+	left: 30%;
+	padding: 20px;
+	height: 100%;
+	overflow: scroll;
+}
+
+#INFOS {
+}
+
+#adresse, #numero, #mail{
+	position: relative;
+	color: white;
+	font-size: 20px;
+}
+
+#CONTACT h2 {
+	font-family: typBold;
+}
+
+#CONTACT p{
+	padding-left: 40px;
+}
+
+#CONTACT a {
+	padding-left: 40px;
+}
+
+
+/* mardi 16 fevrier 2016 Donovan Bigot*/
